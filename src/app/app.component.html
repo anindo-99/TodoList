@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h1>Hello {{name}}</h1>
+<h1>I have {{dogCount}} dogs</h1>
+
+<button (click)="addDog()"></button>
+
+
+
+<div class="center-column">
+
+  <form method="POST" action="/">
+    <!-- {% csrf_token %}
+    {{form.title}} -->
+    <input class="form-control" type="text" placeholder="Enter your task">
+    <input class="btn btn-info" type="submit" name="Create Task">
+  </form>
+
+  <div class="todo-list">
+
+
+    <div class="item-row">
+      <a class="btn btn-sm btn-info" href="app.update_task.html">Update</a>
+
+
+      <span class="p-2">{{task}}</span>
+      <button class="btn btn-sm btn-danger" (click)="showTasks()">Next Task</button>
+
+    </div>
+    <div class="item-row">
+      <a class="btn btn-sm btn-info" href="app.update_task.html">Update</a>
+
+
+      <span class="p-2">Attend Training</span>
+
+    </div>
+
+  </div>
+</div>
+<router-outlet></router-outlet>
+<!-- ctrl+k+s save all -->
